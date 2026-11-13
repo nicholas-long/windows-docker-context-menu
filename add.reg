@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\DockerShell]
+@="Open Docker Shell Here"
+"Icon"="C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\DockerShell\command]
+@="wt.exe powershell.exe -NoProfile -NoExit -ExecutionPolicy Bypass -File \"C:\\Scripts\\DockerShellHere.ps1\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\DockerShell]
+@="Open Docker Shell Here"
+"Icon"="C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\DockerShell\command]
+@="wt.exe powershell.exe -NoProfile -NoExit -ExecutionPolicy Bypass -File \"C:\\Scripts\\DockerShellHere.ps1\" \"%V\""
