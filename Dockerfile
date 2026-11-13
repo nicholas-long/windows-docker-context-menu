@@ -22,10 +22,16 @@ RUN apt-get update && \
         file \
         unzip \
         zip \
-        dos2unix \
-        && rm -rf /var/lib/apt/lists/*
+        dos2unix
 #        ruby \
 #        perl \
+
+WORKDIR /root
+RUN git clone https://github.com/nicholas-long/environment
+RUN cd environment && ./install
+
+# clean up APT cache
+RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
 CMD ["/bin/bash"]

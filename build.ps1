@@ -1,1 +1,1 @@
-docker build . -t kali-dev
+docker build . -t kali-dev --no-cache
